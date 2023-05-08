@@ -148,14 +148,16 @@ The same training arguments as in the [Training Attempt 3](https://github.com/ge
 
 
 ## Installation and Version Instructions
-Make sure that the command line is in the directory of the main ML Agents folder.  
+Please follow the [official installation instructions](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md).
+
+Make sure to open the main directory of ML Agents in the terminal or select the directory afterwards.  
 - example: `PS C:\Users\username\Documents\GitHub\ml-agents>`
 
 Creating and using a [virtual environment](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Virtual-Environment.md) has proven to be useful. It prevents version conflicts and will potentially save a significant amount of time.  
 - create a new environment: `python -m venv python-envs\sample-env`  
 - activate the environment: `python-envs\sample-env\Scripts\activate`
 
-A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together. Please follow the [official installation instructions](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) and install the versions listed below.
+A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together.
 
 Release 20:
 - Machine learning agents toolkit release version 20[^6]
