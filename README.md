@@ -58,11 +58,13 @@ Observing the learning process live via tensorboard:
 `tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`
 
 #### Attempt 3 - More Simultaneous Instances and Hidden Units Changes
+##### Part One
 For this training run the number of environments was increased to 6. Further tests have shown that under the given conditions (hardware and software versions), a maximum number of 6 concurrent Unity instances is reasonable. Beyond that, no time gain is achieved. At this time during the developement phase of this project, a [rare update #5911](https://github.com/Unity-Technologies/ml-agents/pull/5911) (Apr 27, 2023) was released in the developer branch of ml-agents which affected the Walker scenario. Upon installing the new, potentially unstable version and reviewing the revised scenario, a significant improvement in the realism of the sample was observed. Unfortunately, there was no way to train this new model as there was no documentation from Unity regarding this pull, and all commonly used library versions were incompatible[^16]. Since there was no solution to make the new Machine Learning Agents Toolkit version run, it was necessary to review all code modifications. After evaluating which code sections should also work in the old version, the neural network settings were adopted. 
 
 **Before proceeding, please review the first change made in the respective section [Configuration of the Neural Network](https://github.com/georghauschild/AIreadmeTest#configuration-of-the-neural-network)!**
 [^16]:(https://github.com/Unity-Technologies/ml-agents/issues/5912)
 
+##### Part Two
 After 75.000.000 steps the training was finished. After 75,000,000 steps, the training has come to an end. The time acceleration factor has increased from 800 to 1200 by adding two more instances. Therefore, 10 seconds of training is equivalent to 200 minutes of training for the AI model. The AI model had nearly 1 year (342.5 days) time for training, but just 7h and 6 minutes have elapsed.
 `(60 agents * 10 seconds_real_time * 20 factor_time_acceleration) / 60 seconds = 200 virtual_minutes_training in 10 real_seconds`
 
@@ -107,7 +109,7 @@ Excerpt from the .yaml file:
 
 Reducing the number of hidden units from 512 to 256 represents a significant modification to the AI model, which may lead to faster network training and reduced memory usage, as fewer parameters need to be trained. Additionally, the network may become less susceptible to overfitting, especially if the original network architecture was too large.
 On the other hand, decreasing the number of hidden units may result in the network not being able to capture complex relationships in the data as effectively, leading to a poorer model.  
-How it will ultimately behave will be shown in [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes), which  describes the impact of this modification during the training and the occurred result. **Please proceed to read [Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) for a comprehensive understanding of the actual behavior of the model.**
+How it will ultimately behave will be shown in Training Attempt 3, which  describes the impact of this modification during the training and the occurred result. **Please proceed to read [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) for a comprehensive understanding of the actual behavior of the model.**
 
 ## Scripts
 
