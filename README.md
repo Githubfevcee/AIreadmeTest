@@ -132,7 +132,7 @@ Release 20:
 - Windows 11[^14]
 - Numpy 1.21.2[^15]
 
-Developer Branch up to #5911[^19]:  
+Developer Branch up to [#5911](https://github.com/Unity-Technologies/ml-agents/pull/5911):  
 - Machine learning agents toolkit developer branch #5911[^19]
 - Unity 2021.3.14f1[^7]
 - Python 3.9.12[^8]
@@ -144,7 +144,7 @@ Developer Branch up to #5911[^19]:
 - Windows 11[^14]
 - Numpy 1.21.2[^15]
 
-*It may also work for later versions of the developer branch, but it has only been tested up to #5911[^19].*
+*It may also work for later versions of the developer branch, but it has only been tested up to [#5911](https://github.com/Unity-Technologies/ml-agents/pull/5911)*
 
 
 [^6]:https://github.com/Unity-Technologies/ml-agents/tree/release_20
