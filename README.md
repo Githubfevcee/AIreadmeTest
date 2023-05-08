@@ -134,11 +134,24 @@ How it will ultimately behave will be shown in Training Attempt 3, which  descri
 **Continue to read the second part of [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest#part-two) for a comprehensive understanding of the actual behavior of the model.**
 
 ## Developer Branch Integration
-As the brand-new push in the [developer branch](https://github.com/Unity-Technologies/ml-agents/tree/develop) proved to be extremely functional, the project was shifted to it and left the [release-20](https://github.com/Unity-Technologies/ml-agents/tree/release_20) branch. Be aware of version changes mentioned in the [installation and version instructions](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#installation-and-versions-instructions).
+As the brand-new push in the [developer branch](https://github.com/Unity-Technologies/ml-agents/tree/develop) proved to be extremely functional, the project was shifted to it and left the [release-20](https://github.com/Unity-Technologies/ml-agents/tree/release_20) branch. Be aware of version changes mentioned in the [installation and version instructions](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#installation-and-versions-instructions). 
+ ```
+ Version information: 
+  ml-agents: 0.30.0,  
+  ml-agents-envs: 0.30.0,  
+  Communicator API: 1.5.0,  
+  PyTorch: 1.8.0+cpu
+```
+The same training arguments as in the [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) are being used as they have shown to provide satisfactory performance:  
+`mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\exe\UnityEnvironment --num-envs=6 --run-id=MyOwnIdentifier --no-graphics`
+
+
 
 ## Installation and Version Instructions
 A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together. Please follow the [official installation instructions](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) and select the versions listed below.
 Creating and using a [virtual environment](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Virtual-Environment.md) has proven to be useful. It prevents version conflicts and will potentially save a significant amount of time.
+create a new environment: `python -m venv python-envs\sample-env`  
+activate the environment: `python-envs\sample-env\Scripts\activate`
 
 Release 20:
 - Machine learning agents toolkit release version 20[^6]
