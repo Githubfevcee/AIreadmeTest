@@ -145,6 +145,9 @@ As the brand-new push in the [developer branch](https://github.com/Unity-Technol
 The same training arguments as in the [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) are being used as they have shown to provide satisfactory performance:  
 `mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\exe\UnityEnvironment --num-envs=6 --run-id=MyOwnIdentifier --no-graphics`
 
+The training file .yaml is also being taken over from [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) as it has had a positive impact on the AI's ability to better understand its environment and make smarter decisions through the halving of the Hidden Units.
+
+
 
 
 ## Installation and Version Instructions
