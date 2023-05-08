@@ -63,8 +63,8 @@ For this training run the number of environments was increased to 6. Further tes
 **Before proceeding, please review the first change made in the respective section [Configuration of the Neural Network](https://github.com/georghauschild/AIreadmeTest#configuration-of-the-neural-network)!**
 [^16]:(https://github.com/Unity-Technologies/ml-agents/issues/5912)
 
-After 75.000.000 steps the training was finished. After 75,000,000 steps, the training has come to an end. The time acceleration factor has increased from 800 to 1200 by adding two more instances. Therefore, 10 seconds of training is equivalent to 200 minutes of training for the AI model.  
-`(60 agents * 10 seconds_real_time * 20 factor_time_acceleration) / 60 seconds = 200 minutes_training`
+After 75.000.000 steps the training was finished. After 75,000,000 steps, the training has come to an end. The time acceleration factor has increased from 800 to 1200 by adding two more instances. Therefore, 10 seconds of training is equivalent to 200 minutes of training for the AI model. The AI model had nearly 1 year (342.5 days) time for training, but just 7h and 6 minutes have elapsed.
+`(60 agents * 10 seconds_real_time * 20 factor_time_acceleration) / 60 seconds = 200 virtual_minutes_training in 10 real_seconds`
 
 The complete training run can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars).  
 In contrast to the previous attempt, there is now a continuous increase in success rate (Environment/Cumulative Reward). Nonetheless, the Value Loss diagram (Losses/Value Loss) shows the most significant contrast between the two training runs, where it constantly increased in the previous run but consistently decreased in the current run.
@@ -119,8 +119,8 @@ Creating and using a [virtual environment](https://github.com/Unity-Technologies
 - Python 3.9.12[^8]
 - Ml-agents python package 0.30[^9]
 - pip 23.1.2[^10]
-- PyTorch 1.7.1+cu110[^11] and later PyTorch 1.8.0+cpu[^17]
-- Ml-agents Unity package 2.0.1[^12]
+- PyTorch 1.7.1+cu110[^11] and later 1.8.0+cpu[^17]
+- Ml-agents Unity package 2.0.1[^12] and later 2.3.0-exp.4<sup>display error? it's maybe exp.3</sup>
 - Tensorboard 2.13.0[^13]
 - Windows 11[^14]
 - Numpy 1.21.2[^15]
@@ -136,6 +136,7 @@ Creating and using a [virtual environment](https://github.com/Unity-Technologies
 [^14]:https://www.microsoft.com/de-de/software-download/windows11
 [^15]:https://numpy.org/doc/stable/release/1.21.2-notes.html
 [^17]:https://pytorch.org/get-started/previous-versions/
+[^18]:https://docs.unity3d.com/Packages/com.unity.ml-agents@2.3/manual/index.html
 
 Walker Benchmark Mean Reward : 2500
 
