@@ -32,7 +32,7 @@ In order to generate a custom AI model, it is advisable to first optimize the tr
 Following components were used creating Human-Motion-AI:
 - CPU: AMD Ryzen 9-5900X[^1]
 - GPU: RTX 4090[^2]
-- RAM: 32GB[^3]
+- RAM: 32 GB[^3]
 [^1]: https://www.amd.com/de/products/cpu/amd-ryzen-9-5900x
 [^2]: https://manli.com/en/product-detail-Manli_GeForce_RTX%C2%AE_4090_Gallardo_(M3530+N675)-312.html
 [^3]: https://www.corsair.com/de/de/Kategorien/Produkte/Arbeitsspeicher/VENGEANCE%C2%AE-LPX-32GB-%282-x-16GB%29-DDR4-DRAM-3000MHz-C16-Memory-Kit---Black/p/CMK32GX4M2D3000C16
