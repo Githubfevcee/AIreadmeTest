@@ -134,7 +134,7 @@ How it will ultimately behave will be shown in Training Attempt 3, which  descri
 **Continue to read the second part of [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest#part-two) for a comprehensive understanding of the actual behavior of the model.**
 
 ## Developer Branch Integration
-As the brand-new push in the [developer branch](https://github.com/Unity-Technologies/ml-agents/tree/develop) proved to be extremely functional, the project was shifted to it and left the [release-20](https://github.com/Unity-Technologies/ml-agents/tree/release_20) branch. Be aware of version changes mentioned in the [installation and version instructions](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#installation-and-versions-instructions). 
+As the brand-new push in the [developer branch](https://github.com/Unity-Technologies/ml-agents/tree/develop) proved to be extremely functional, the project was shifted to it and left the [release-20](https://github.com/Unity-Technologies/ml-agents/tree/release_20) branch. Be aware of version changes mentioned in the [installation and version instructions](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#installation-and-version-instructions). 
  ```
  Version information: 
   ml-agents: 0.30.0,  
