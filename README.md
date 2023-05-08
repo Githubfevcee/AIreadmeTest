@@ -1,18 +1,18 @@
 # Human-Motion-AI
 Human-Motion-AI aims to simulate human movement behavior using artificial inteligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and incorporates various optimizations. 
 
-**Please note that this documentation keeps track of all steps performed, including those that were unsuccessful. This allows inexperienced developers to evaluate and understand the procedure to gain new knowledge. This documentation captures parts of my learning progress in machine learning and specifically about reinforcement learning in Unity and is intended to be helpful for developers working on similar projects. Background knowledge, helpful tips and links are included.**
+**Please note that this documentation keeps track of all steps performed, including those that were unsuccessful. This allows inexperienced developers to evaluate and understand the procedure to gain new knowledge. This documentation captures parts of my learning progress in machine learning and specifically about reinforcement learning in Unity and is intended to be helpful for developers working on similar projects. My recommendation is to read the complete documentation first to prevent errors. Background knowledge, helpful tips and links are included.**
 
 ## Steps of optimisation
 - [x] Training environments
-- [ ] Hyperparameter
-- [ ] Scripts
+- [x] Hyperparameter
+- [x] Scripts
 - [ ] Implementation of [Marathon](https://github.com/Unity-Technologies/marathon-envs)
 
-The project is work in progess. Unprocessed optimisation methods may be subject of change. 
+The project is work in progress. Unprocessed optimisation methods may be subject of change. 
 
 ## Training environments
-In order to generate a custom AI model, it is advisable to first optimize the training process and tailor it to the available hardware. Following components were used creating this project:
+In order to generate a custom AI model, it is advisable to first optimize the training process and tailor it to the available hardware. Following components were used creating Human-Motion-AI:
 - CPU: AMD Ryzen 9-5900X[^1]
 - GPU: RTX 4090[^2]
 - RAM: 32GB[^3]
@@ -30,14 +30,24 @@ It appears that a powerful CPU is crucial for both training and inference, and c
 
 The initial attempt to speed up the training process was to increase the number of agents from 10 to 20. However, this did not yield any performance improvement during testing, and therefore, this method was discarded.
 
-In the second attempt [Concurrent Unity Instances](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Training-ML-Agents.md#training-using-concurrent-unity-instances) was used. Four environments were created, each with 10 agents undergoing training. Therefore, 40 agents were trained across 4 environments. Since each training session runs at 20 times the normal speed, a speed factor of 800 was achieved. At 10 seconds of real-time training the AI model was able to train for 133.3 minutes. The result of this training are in detail stored at this [tensorboard](https://tensorboard.dev/experiment/9a0ykmWaRj2aoi56K9X2hA/#scalars). The official definition for the given diagramms can be found [here](https://unity-technologies.github.io/ml-agents/Using-Tensorboard/). 
+In the second attempt [Concurrent Unity Instances](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Training-ML-Agents.md#training-using-concurrent-unity-instances) was used. 
+Four environments were created, each with 10 agents undergoing training. Therefore, 40 agents were trained across 4 environments. Since each training session runs at 20 times the normal speed, a speed factor of 800 was achieved. At 10 seconds of real-time training the AI model was able to train for 133.3 minutes. Using the no-graphics label is useful for saving hardware resources if you don't need to observe the AI training progress. You can still view a detailed live report of the ongoing training with the [TensorFlow utility named tensorboard](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Tensorboard.md). The result of this training are in detail stored at this uploaded [tensorboard](https://tensorboard.dev/experiment/9a0ykmWaRj2aoi56K9X2hA/#scalars). The official definition for the given diagramms can be found [here](https://unity-technologies.github.io/ml-agents/Using-Tensorboard/).
 After almost 7 hours of real-time training (equivalent to 5600 hours of AI training), the following main observations were noted:
 
 - High learning progress during the first hour and a half.
 - The middle phase was characterized by low learning progress and even a decline in the learned achievements.
 - Towards the end of the training phase, there was a slow but steady improvement in the success performance.
 
+Starting the learning process:`mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\foldername\UnityEnvironment --num-envs=4 --run-id=MyOwnIdentifier --no-graphics`
+Observing the learning process via tensorboard:`tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`
+
+## Hyperparameter
+
+## Scripts
+
 ## Software and library versions
+A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together. Please follow the [official installation instructions](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) and select the versions listed below.
+Creating and using a [virtual environment](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Virtual-Environment.md) has proven to be useful. It prevents version conflicts and will potentially save a significant amount of time.
 - Machine learning agents toolkit release version 20[^6]
 - Unity 2021.3.14f1[^7]
 - Python 3.9.12[^8]
