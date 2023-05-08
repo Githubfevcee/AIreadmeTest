@@ -52,11 +52,24 @@ Starting the learning process with concurrent Unity instances:`mlagents-learn co
 Observing the learning process live via tensorboard:`tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`
 
 #### Attempt 3 - More Simultaneous Instances
-For this training run the number of environments was increased to 6, which is the maximum supported by the given setup. During the developement phase of this project, a [rare update #5911](https://github.com/Unity-Technologies/ml-agents/pull/5911) (Apr 27, 2023) was released in the developer branch of ml-agents which affected the Walker scenario. Upon installing the new, potentially unstable version and reviewing the revised scenario, a significant improvement in the realism of the sample was observed. Unfortunately, there was no way to train this new model as there was no documentation from Unity regarding this pull, and all commonly used library versions were incompatible[^16]. Since there was no solution to make the new Machine Learning Agents Toolkit version run, it was necessary to review all code modifications. After evaluating which code sections should also work in the old version, they were implemented. The hyperparameters and scripts were reviewed and adopted with modifications. **Before proceeding, please review the changes made in the respective sections [Hyperparameter](https://github.com/georghauschild/AIreadmeTest#hyperparameter) and [Scripts](https://github.com/georghauschild/AIreadmeTest#scripts).**
+For this training run the number of environments was increased to 6, which is the maximum supported by the given setup. During the developement phase of this project, a [rare update #5911](https://github.com/Unity-Technologies/ml-agents/pull/5911) (Apr 27, 2023) was released in the developer branch of ml-agents which affected the Walker scenario. Upon installing the new, potentially unstable version and reviewing the revised scenario, a significant improvement in the realism of the sample was observed. Unfortunately, there was no way to train this new model as there was no documentation from Unity regarding this pull, and all commonly used library versions were incompatible[^16]. Since there was no solution to make the new Machine Learning Agents Toolkit version run, it was necessary to review all code modifications. After evaluating which code sections should also work in the old version, they were implemented. The hyperparameters and scripts were reviewed and adopted with modifications. 
+
+**Before proceeding, please review the changes made in the respective sections [Hyperparameter](https://github.com/georghauschild/AIreadmeTest#hyperparameter) and [Scripts](https://github.com/georghauschild/AIreadmeTest#scripts)!**
 [^16]:(https://github.com/Unity-Technologies/ml-agents/issues/5912)
 
 
 ## Hyperparameter
+Before an AI model can be trained, it needs to receive information on how the training will be implemented and executed. The [content of the .yaml file](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md) contains all the relevant information. Some of the most important parameters include: algorithm, [hyperparameters](https://unity-technologies.github.io/ml-agents/Training-ML-Agents/), reward signals, and training duration.
+
+    `hyperparameters:
+      batch_size: 2048
+      buffer_size: 20480
+      learning_rate: 0.0003
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear`
 
 ## Scripts
 
