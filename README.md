@@ -81,8 +81,7 @@ Several undocumented version conflicts have delayed work on the new version[^16]
 ##### Part Two
 After 75,000,000 steps the training was finished. The time acceleration factor has increased from 800 to 1200 by adding two more instances. Therefore, 10 seconds of training is equivalent to 200 minutes of training for the AI model. The AI model had nearly 1 year (342.5 days) time for training, but just 7h and 6 minutes have elapsed.
 `(60 agents * 10 seconds_real_time * 20 factor_time_acceleration) / 60 seconds = 200 virtual_minutes_training in 10 real_seconds`
-
-The complete training run can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars).  
+  
 In contrast to the previous attempt, there is now a continuous increase in success rate (Environment/Cumulative Reward). Nonetheless, the Value Loss diagram (Losses/Value Loss) shows the most significant contrast between the two training runs, where it constantly increased in the previous run but consistently decreased in the current run.
 > "The mean loss of the value function update. Correlates to how well the model is able to predict the value of each state. This should increase while the agent is learning, and then decrease once the reward stabilizes." -[Unity Documentation](https://unity-technologies.github.io/ml-agents/Using-Tensorboard/)  
 > 
@@ -95,6 +94,7 @@ Value Loss - Attempt 2 - Concurrent Unity Instances:
 Value Loss - Attempt 3 - More Simultaneous Instances and Hidden Units Changes:
 ![Losses_Value Loss 256HU](https://user-images.githubusercontent.com/37111215/236862968-f16f6ae2-f3af-405e-98da-3163d59698f9.svg)
 
+The complete training run can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars). 
 Since no substantial changes were made other than halving the Hidden Units in the configuration of the neural network, it is now certain that this modification has had a very positive impact on the AI's ability to better understand its environment and make smarter decisions.
 
 
