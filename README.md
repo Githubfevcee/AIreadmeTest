@@ -1,11 +1,11 @@
 # Human-Motion-AI
-Human-Motion-AI aims to simulate human movement behavior, using artificial intelligence. The Unity project is based on the [walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) (also known as ml-agents) and incorporates various optimisations. 
+Human-Motion-AI aims to simulate human movement behavior, using artificial intelligence. The Unity project is based on the [walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) (also known as ml-agents) and incorporates various optimizations. 
 
 **Please note that this documentation keeps track of all steps performed, including those that were unsuccessful. This allows inexperienced developers to evaluate and understand the procedure to gain new knowledge. Parts of my learning progress in machine learning, specifically about reinforcement learning in Unity, are captured in this documentation and is intended to be helpful for developers working on similar projects. My recommendation is to read the complete documentation first to prevent avoidable errors. Background knowledge, helpful tips and links are included. If you want to dive in directly, be sure to pay close attention to the [installation and version instructions](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#installation-and-version-instructions).**
 
 ## Chronological Order
 1. [Installation and Version Instructions](https://github.com/georghauschild/AIreadmeTest#installation-and-version-instructions)
-2. [Steps of Optimisation](https://github.com/georghauschild/AIreadmeTest#steps-of-optimisation)
+2. [Steps of Optimization](https://github.com/georghauschild/AIreadmeTest#steps-of-optimization)
 3. [Training - Hardware Utilization](https://github.com/georghauschild/AIreadmeTest#hardware-utilization)
 4. [Training - Customized Training Routines - Attempt 1 - Increased Agent Number](https://github.com/georghauschild/AIreadmeTest#attempt-1---increased-agent-number)
 5. [Training - Customized Training Routines - Attempt 2 - Concurrent Unity Instances](https://github.com/georghauschild/AIreadmeTest#attempt-2---concurrent-unity-instances)
@@ -13,10 +13,10 @@ Human-Motion-AI aims to simulate human movement behavior, using artificial intel
 7. [Configuration of the Neural Network - Configuration Modification 1 Reduced Hidden Units](https://github.com/georghauschild/AIreadmeTest#configuration-modification-1---reduced-hidden-units)
 8. [Training - Customized Training Routines - Attempt 3 - More Simultaneous Instances and Hidden Units Changes - Part Two](https://github.com/georghauschild/AIreadmeTest#part-two)
 9. [Developer Branch Integration](https://github.com/georghauschild/AIreadmeTest#developer-branch-integration)
-10. [Developer Branch AI model]()
+10. [Developer Branch AI model](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#developer-branch-ai-model)
 10. ...to be continued
 
-## Steps of Optimisation
+## Steps of Optimization
 - [x] Training
 - [x] Configuration of the Neural Network
 - [x] Developer Branch Integration
@@ -24,7 +24,7 @@ Human-Motion-AI aims to simulate human movement behavior, using artificial intel
 - [ ] Support from non-AI-based tools
 - [ ] Implementation of [Marathon](https://github.com/Unity-Technologies/marathon-envs)
 
-The project is work in progress. Unprocessed optimisation methods may be subject of change. 
+The project is work in progress. Unprocessed optimization methods may be subject of change. 
 
 ## Training
 In order to generate a custom AI model, it is advisable to first optimize the training process and tailor it to the available hardware.
