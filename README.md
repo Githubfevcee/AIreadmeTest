@@ -5,7 +5,7 @@ Human-Motion-AI aims to simulate human movement behavior using artificial inteli
 
 ## Steps of Optimisation
 - [x] Training
-- [x] Hyperparameter
+- [x] Configuration of the Neural Network
 - [x] Scripts
 - [ ] Implementation of [Marathon](https://github.com/Unity-Technologies/marathon-envs)
 
@@ -51,25 +51,45 @@ Code insights:
 Starting the learning process with concurrent Unity instances:`mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\foldername\UnityEnvironment --num-envs=4 --run-id=MyOwnIdentifier --no-graphics`  
 Observing the learning process live via tensorboard:`tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`
 
-#### Attempt 3 - More Simultaneous Instances
+#### Attempt 3 - More Simultaneous Instances and Hidden Units Changes
 For this training run the number of environments was increased to 6, which is the maximum supported by the given setup. During the developement phase of this project, a [rare update #5911](https://github.com/Unity-Technologies/ml-agents/pull/5911) (Apr 27, 2023) was released in the developer branch of ml-agents which affected the Walker scenario. Upon installing the new, potentially unstable version and reviewing the revised scenario, a significant improvement in the realism of the sample was observed. Unfortunately, there was no way to train this new model as there was no documentation from Unity regarding this pull, and all commonly used library versions were incompatible[^16]. Since there was no solution to make the new Machine Learning Agents Toolkit version run, it was necessary to review all code modifications. After evaluating which code sections should also work in the old version, they were implemented. The hyperparameters and scripts were reviewed and adopted with modifications. 
 
-**Before proceeding, please review the changes made in the respective sections [Hyperparameter](https://github.com/georghauschild/AIreadmeTest#hyperparameter) and [Scripts](https://github.com/georghauschild/AIreadmeTest#scripts)!**
+**Before proceeding, please review the changes made in the respective sections [Configuration of the Neural Network](https://github.com/georghauschild/AIreadmeTest/edit/main/README.md#configuration-of-the-neural-network) and [Scripts](https://github.com/georghauschild/AIreadmeTest#scripts)!**
 [^16]:(https://github.com/Unity-Technologies/ml-agents/issues/5912)
 
 
-## Hyperparameter
-Before an AI model can be trained, it needs to receive information on how the training will be implemented and executed. The [content of the .yaml file](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md) contains all the relevant information. Some of the most important parameters include: algorithm, [hyperparameters](https://unity-technologies.github.io/ml-agents/Training-ML-Agents/), reward signals, and training duration.
+## Configuration of the Neural Network
+Before an AI model can be trained, it needs to receive information on how the training will be implemented and executed. The [content of the .yaml file](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md) contains all the relevant information. Some of the most important parameters include: algorithm, [hyperparameters](https://unity-technologies.github.io/ml-agents/Training-ML-Agents/#behavior-configurations), reward signals, and training duration.
 
-    `hyperparameters:
-      batch_size: 2048
-      buffer_size: 20480
-      learning_rate: 0.0003
-      beta: 0.005
+### Configuration Modification 1 - Reduced Hidden Units
+
+Excerpt from the .yaml file:  
+     
+    
+    trainer_type: ppo  
+    hyperparameters:  
+      batch_size: 2048  
+      buffer_size: 20480  
+      learning_rate: 0.0003  
+      beta: 0.005  
       epsilon: 0.2
       lambd: 0.95
       num_epoch: 3
-      learning_rate_schedule: linear`
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+      vis_encode_type: simple
+    reward_signals:
+      extrinsic:
+        gamma: 0.995
+        strength: 1.0
+
+Reducing the number of hidden units from 512 to 256 represents a significant modification to the AI model, which may lead to faster network training and reduced memory usage, as fewer parameters need to be trained. Additionally, the network may become less susceptible to overfitting, especially if the original network architecture was too large.
+On the other hand, decreasing the number of hidden units may result in the network not being able to capture complex relationships in the data as effectively, leading to a poorer model.  
+How it will ultimately behave will be shown in [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest/edit/main/README.md#attempt-3---more-simultaneous-instances-and-hidden-units-changes), which  describes the impact of this modification during the training and the occurred result. Please proceed to read [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest/edit/main/README.md#attempt-3---more-simultaneous-instances-and-hidden-units-changes) for a comprehensive understanding of the actual behavior of the model.
+
 
 ## Scripts
 
