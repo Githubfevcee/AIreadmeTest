@@ -99,7 +99,7 @@ Value Loss - Attempt 3 - More Simultaneous Instances and Hidden Units Changes:
 The complete training run 3 can be viewed in this [tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars).  
 Since no substantial changes were made other than halving the Hidden Units in the configuration of the neural network, it is now certain that this modification has had a very positive impact on the AI's ability to better understand its environment and make smarter decisions.  
 Download this AI model [here](https://drive.google.com/file/d/1tOfK2Jsr-tLzane6bZieoT-tYFFpzJqN/view?usp=sharing).  
-**Note: This AI model will run on ML Agents release version 20 but not the developer branch version.**
+**Note: This AI model will run on ML Agents release version 20 but not on the developer branch version.**
 
 ## Configuration of the Neural Network
 Before an AI model can be trained, it needs to receive information on how the training will be implemented and executed.
@@ -145,10 +145,10 @@ As the brand-new push in the [developer branch](https://github.com/Unity-Technol
   PyTorch: 1.8.0+cpu
 ```
 ## Developer Branch AI model
-The same training arguments as in the [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) are being used as they have shown to provide satisfactory performance:  
+The same training arguments as in the [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) are being used as they have shown to provide a good improvement in performance:  
 `mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\exe\UnityEnvironment --num-envs=6 --run-id=MyOwnIdentifier --no-graphics`
 
-The [modified training file](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#configuration-modification-1---reduced-hidden-units) is also being taken over from [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) as it has had a positive impact on the AI's ability to better understand its environment and make smarter decisions through the halving of the Hidden Units.
+The [modified training file](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#configuration-modification-1---reduced-hidden-units) is also being taken over from [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) as it has had a positive impact on the AI's ability to better understand its environment and make smarter decisions through the halving of the hidden units.
 
 The completed training for the developer branch model can be viewed in this [tensorboard](https://tensorboard.dev/experiment/0nh8iKjQTKCgABRRbYnz4w/#scalars).
 
