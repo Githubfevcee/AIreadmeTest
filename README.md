@@ -3,7 +3,7 @@ Human-Motion-AI aims to simulate human movement behavior using artificial inteli
 
 **Please note that this documentation keeps track of all steps performed, including those that were unsuccessful. This allows inexperienced developers to evaluate and understand the procedure to gain new knowledge. This documentation captures parts of my learning progress in machine learning and specifically about reinforcement learning in Unity and is intended to be helpful for developers working on similar projects. My recommendation is to read the complete documentation first to prevent avoidable errors. Background knowledge, helpful tips and links are included. If you want to dive in directly, be sure to pay close attention to the [installation and version instructions](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#installation-and-versions-instructions).**
 
-##Chronological Order
+## Chronological Order
 1. [Installation and Version Instructions](https://github.com/georghauschild/AIreadmeTest#installation-and-versions-instructions)
 2. [Steps of Optimisation](https://github.com/georghauschild/AIreadmeTest#steps-of-optimisation)
 3. [Training - Hardware Utilization](https://github.com/georghauschild/AIreadmeTest#hardware-utilization)
