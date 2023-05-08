@@ -118,13 +118,27 @@ As the brand-new push in the [developer branch](https://github.com/Unity-Technol
 ## Software and Library Versions
 A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together. Please follow the [official installation instructions](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) and select the versions listed below.
 Creating and using a [virtual environment](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Virtual-Environment.md) has proven to be useful. It prevents version conflicts and will potentially save a significant amount of time.
-- Machine learning agents toolkit release version 20[^6] and later Machine learning agents toolkit developer branch #5911[^19]
+
+Release 2020:
+- Machine learning agents toolkit release version 20[^6]
 - Unity 2021.3.14f1[^7]
 - Python 3.9.12[^8]
 - Ml-agents python package 0.30[^9]
 - pip 23.1.2[^10]
-- PyTorch 1.7.1+cu110[^11] and later 1.8.0+cpu[^17]
-- Ml-agents Unity package 2.0.1[^12] and later 2.3.0-exp.4<sup>display error? it's maybe exp.3</sup>
+- PyTorch 1.7.1+cu110[^11]
+- Ml-agents Unity package 2.0.1[^12]
+- Tensorboard 2.13.0[^13]
+- Windows 11[^14]
+- Numpy 1.21.2[^15]
+
+Developer Branch:  
+- Machine learning agents toolkit developer branch #5911[^19]
+- Unity 2021.3.14f1[^7]
+- Python 3.9.12[^8]
+- Ml-agents python package 0.30[^9]
+- pip 23.1.2[^10]
+- PyTorch 1.8.0+cpu[^17]
+- Ml-agents Unity package 2.3.0-exp.4<sup>display error? it's maybe exp.3</sup>
 - Tensorboard 2.13.0[^13]
 - Windows 11[^14]
 - Numpy 1.21.2[^15]
