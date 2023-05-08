@@ -66,7 +66,7 @@ Several undocumented version conflicts have delayed work on the new version[^16]
 [^16]:(https://github.com/Unity-Technologies/ml-agents/issues/5912)
 
 ##### Part Two
-After 75.000.000 steps the training was finished. After 75,000,000 steps, the training has come to an end. The time acceleration factor has increased from 800 to 1200 by adding two more instances. Therefore, 10 seconds of training is equivalent to 200 minutes of training for the AI model. The AI model had nearly 1 year (342.5 days) time for training, but just 7h and 6 minutes have elapsed.
+After 75.000.000 steps the training was finished. The time acceleration factor has increased from 800 to 1200 by adding two more instances. Therefore, 10 seconds of training is equivalent to 200 minutes of training for the AI model. The AI model had nearly 1 year (342.5 days) time for training, but just 7h and 6 minutes have elapsed.
 `(60 agents * 10 seconds_real_time * 20 factor_time_acceleration) / 60 seconds = 200 virtual_minutes_training in 10 real_seconds`
 
 The complete training run can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars).  
