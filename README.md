@@ -97,9 +97,8 @@ Value Loss - Attempt 3 - More Simultaneous Instances and Hidden Units Changes:
 ![Losses_Value Loss 256HU](https://user-images.githubusercontent.com/37111215/236862968-f16f6ae2-f3af-405e-98da-3163d59698f9.svg)
 
 The complete training run 3 can be viewed in this [tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars).  
-Since no substantial changes were made other than halving the Hidden Units in the configuration of the neural network, it is now certain that this modification has had a very positive impact on the AI's ability to better understand its environment and make smarter decisions. Download and test this AI model [here](https://drive.google.com/file/d/1tOfK2Jsr-tLzane6bZieoT-tYFFpzJqN/view?usp=sharing).
-
-
+Since no substantial changes were made other than halving the Hidden Units in the configuration of the neural network, it is now certain that this modification has had a very positive impact on the AI's ability to better understand its environment and make smarter decisions. Download this AI model [here](https://drive.google.com/file/d/1tOfK2Jsr-tLzane6bZieoT-tYFFpzJqN/view?usp=sharing).  
+**Note: This AI model will run on ML Agents release version 20 but not the developer branch version.**
 
 ## Configuration of the Neural Network
 Before an AI model can be trained, it needs to receive information on how the training will be implemented and executed.
@@ -167,7 +166,7 @@ Creating and using a [virtual environment](https://github.com/Unity-Technologies
 - activate the environment: `python-envs\sample-env\Scripts\activate`
 
 A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together.  
-The Release 20 is the latest current stable version. The Developer Branch is experimental, may provide more features, but can be unstable and cause version conflicts.
+The Release 20 is the latest current stable version. The developer branch is experimental, may provide more features, but can be unstable and cause version conflicts.
 
 Release 20:
 - Machine learning agents toolkit release version 20[^6]
