@@ -29,9 +29,9 @@ Following components were used creating Human-Motion-AI:
 > "This PPO implementation is not optimized for the use of a GPU. In general, it is not that easy to optimize Reinforcement Learning for the use of a GPU. So you are better of with a CPU currently." -[Marco Pleines, PhD student at TU Dortmund, Deep Reinforcement Learning](https://github.com/Unity-Technologies/ml-agents/issues/1246)
 
 It appears that a powerful CPU is crucial for both training and inference, and contrary to popular belief, the GPU plays a subordinate role in this case, because the implemention of the [reinforcement learning  algorithm "PPO"](https://github.com/yosider/ml-agents-1/blob/master/docs/Training-PPO.md) is supposedly not optimized for GPU usage.[^4][^5]  
-To confirm this, the same AI model was trained using both methods. PyTorch in version 1.8.1+cpu (CPU-focused) and 1.8.0+cu111 (GPU-focused) was used. The result was clear in all test runs. The CPU version is capable of performing calculations faster than the GPU Cuda version.
+To confirm this, the same AI model was trained using both methods. PyTorch in version 1.8.0+cpu (CPU-focused) and 1.8.0+cu111 (GPU-focused) was used. The result was clear in all test runs. The CPU version is capable of performing calculations faster than the GPU Cuda version.
 ![pytorch1 8cpuVSgpupng3](https://user-images.githubusercontent.com/37111215/236808865-2cc2bd89-641c-420f-bad5-ef6717e1bd68.png)  
-Left side = Training with version 1.8.1+cpu (CPU-focused)  
+Left side = Training with version 1.8.0+cpu (CPU-focused)  
 Right side = Training with version 1.8.0+cu111 (GPU-focused)
 
 
@@ -58,7 +58,7 @@ Starting the learning process with concurrent Unity instances:`mlagents-learn co
 Observing the learning process live via tensorboard:`tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`
 
 #### Attempt 3 - More Simultaneous Instances and Hidden Units Changes
-For this training run the number of environments was increased to 6, which is the maximum supported by the given setup. During the developement phase of this project, a [rare update #5911](https://github.com/Unity-Technologies/ml-agents/pull/5911) (Apr 27, 2023) was released in the developer branch of ml-agents which affected the Walker scenario. Upon installing the new, potentially unstable version and reviewing the revised scenario, a significant improvement in the realism of the sample was observed. Unfortunately, there was no way to train this new model as there was no documentation from Unity regarding this pull, and all commonly used library versions were incompatible[^16]. Since there was no solution to make the new Machine Learning Agents Toolkit version run, it was necessary to review all code modifications. After evaluating which code sections should also work in the old version, the neural network settings were adopted. 
+For this training run the number of environments was increased to 6, which is the maximum supported by the given setup. At this time during the developement phase of this project, a [rare update #5911](https://github.com/Unity-Technologies/ml-agents/pull/5911) (Apr 27, 2023) was released in the developer branch of ml-agents which affected the Walker scenario. Upon installing the new, potentially unstable version and reviewing the revised scenario, a significant improvement in the realism of the sample was observed. Unfortunately, there was no way to train this new model as there was no documentation from Unity regarding this pull, and all commonly used library versions were incompatible[^16]. Since there was no solution to make the new Machine Learning Agents Toolkit version run, it was necessary to review all code modifications. After evaluating which code sections should also work in the old version, the neural network settings were adopted. 
 
 **Before proceeding, please review the first change made in the respective section [Configuration of the Neural Network](https://github.com/georghauschild/AIreadmeTest#configuration-of-the-neural-network)!**
 [^16]:(https://github.com/Unity-Technologies/ml-agents/issues/5912)
