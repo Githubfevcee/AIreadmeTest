@@ -1,5 +1,5 @@
 # Human-Motion-AI
-Human-Motion-AI aims to simulate human movement behavior using artificial inteligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and applies various optimisations. 
+Human-Motion-AI aims to simulate human movement behavior using artificial inteligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and applies various optimisations. 
 
 **Please note that this documentation tracks all applied steps, regardless of their usefulness. This documentation records the progress of learning and is beneficial for individuals seeking to undertake similar endeavors. Background knowledge and helpful tips and links are included.**
 
@@ -30,3 +30,6 @@ After almost 7 hours of real-time training (equivalent to 5600 hours of AI train
 - High learning progress was observed during the first hour and a half.
 - The middle phase was characterized by low learning progress and even a decline in the learned achievements.
 - Towards the end of the training phase, there was a slow but steady improvement in the success performance.
+
+Benchmark Mean Reward : 2500
+https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars
