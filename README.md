@@ -33,8 +33,6 @@ To confirm this, the same AI model was trained using both methods. PyTorch in ve
 ![pytorch1 8cpuVSgpupng3](https://user-images.githubusercontent.com/37111215/236808865-2cc2bd89-641c-420f-bad5-ef6717e1bd68.png)  
 Left side = Training with version 1.8.0+cpu (CPU-focused)  
 Right side = Training with version 1.8.0+cu111 (GPU-focused)
-
-
 [^4]:https://github.com/Unity-Technologies/ml-agents/issues/1246
 [^5]:https://github.com/Unity-Technologies/ml-agents/issues/4129
 
@@ -54,14 +52,29 @@ After almost 7 hours of real-time training (equivalent to 5600 hours of AI train
 After completing the training and testing the new AI model, the outcome was disappointing. It did not behave more realistically than the sample AI model provided by the machine learning agents toolkit.
 
 Code insights:  
-Starting the learning process with concurrent Unity instances:`mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\foldername\UnityEnvironment --num-envs=4 --run-id=MyOwnIdentifier --no-graphics`  
-Observing the learning process live via tensorboard:`tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`
+Starting the learning process with concurrent Unity instances:  
+`mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\foldername\UnityEnvironment --num-envs=4 --run-id=MyOwnIdentifier --no-graphics`  
+Observing the learning process live via tensorboard:  
+`tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`
 
 #### Attempt 3 - More Simultaneous Instances and Hidden Units Changes
-For this training run the number of environments was increased to 6, which is the maximum supported by the given setup. At this time during the developement phase of this project, a [rare update #5911](https://github.com/Unity-Technologies/ml-agents/pull/5911) (Apr 27, 2023) was released in the developer branch of ml-agents which affected the Walker scenario. Upon installing the new, potentially unstable version and reviewing the revised scenario, a significant improvement in the realism of the sample was observed. Unfortunately, there was no way to train this new model as there was no documentation from Unity regarding this pull, and all commonly used library versions were incompatible[^16]. Since there was no solution to make the new Machine Learning Agents Toolkit version run, it was necessary to review all code modifications. After evaluating which code sections should also work in the old version, the neural network settings were adopted. 
+For this training run the number of environments was increased to 6. Further tests have shown that under the given conditions (hardware and software versions), a maximum number of 6 concurrent Unity instances is reasonable. Beyond that, no time gain is achieved. At this time during the developement phase of this project, a [rare update #5911](https://github.com/Unity-Technologies/ml-agents/pull/5911) (Apr 27, 2023) was released in the developer branch of ml-agents which affected the Walker scenario. Upon installing the new, potentially unstable version and reviewing the revised scenario, a significant improvement in the realism of the sample was observed. Unfortunately, there was no way to train this new model as there was no documentation from Unity regarding this pull, and all commonly used library versions were incompatible[^16]. Since there was no solution to make the new Machine Learning Agents Toolkit version run, it was necessary to review all code modifications. After evaluating which code sections should also work in the old version, the neural network settings were adopted. 
 
 **Before proceeding, please review the first change made in the respective section [Configuration of the Neural Network](https://github.com/georghauschild/AIreadmeTest#configuration-of-the-neural-network)!**
 [^16]:(https://github.com/Unity-Technologies/ml-agents/issues/5912)
+
+After 75.000.000 steps the training was finished. After 75,000,000 steps, the training has come to an end. The time acceleration factor has increased from 800 to 1200 by adding two more instances. Therefore, 10 seconds of training is equivalent to 200 minutes of training for the AI model.  
+`(60 agents * 10 seconds_real_time * 20 factor_time_acceleration) / 60 seconds = 200 minutes_training`
+
+The complete training run can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars).  
+In contrast to the previous attempt, there is now a continuous increase in success rate (Environment/Cumulative Reward). Nonetheless, the Value Loss diagram (Losses/Value Loss) shows the most significant contrast between the two training runs, where it constantly increased in the previous run but consistently decreased in the current run.
+> "The mean loss of the value function update. Correlates to how well the model is able to predict the value of each state. This should increase while the agent is learning, and then decrease once the reward stabilizes." -[Unity Documentation](https://unity-technologies.github.io/ml-agents/Using-Tensorboard/)  
+> 
+The Value Loss diagram indicates how well the model predicts the values of each state evaluation. During learning, the Value Loss diagram should initially increase as the model attempts to improve its prediction capabilities to better understand the environment and make better decisions. However, once the model starts to better understand the environment and make better decisions, the Value Loss should gradually decrease as the model is able to more accurately predict the state evaluations.  
+In contrast, a consistently increasing Value Loss diagram indicates that the model is struggling to understand the environment and make better decisions, leading to poorer performance.  
+
+Since no substantial changes were made other than halving the Hidden Units in the configuration of the neural network, it is now certain that this modification has had a very positive impact on the AI's ability to better understand its environment and make smarter decisions.
+
 
 
 ## Configuration of the Neural Network
