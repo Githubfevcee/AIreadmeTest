@@ -1,7 +1,7 @@
 # Human-Motion-AI
 Human-Motion-AI aims to simulate human movement behavior using artificial inteligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and applies various optimisations. 
 
-**Please note that this documentation tracks all applied steps, regardless of their usefulness. This documentation records the progress of learning and is beneficial for individuals seeking to undertake similar endeavors.**
+**Please note that this documentation tracks all applied steps, regardless of their usefulness. This documentation records the progress of learning and is beneficial for individuals seeking to undertake similar endeavors. Background knowledge and helpful tips and links are included.**
 
 ## Steps of optimisation
 - [x] Training environments
@@ -24,4 +24,9 @@ It appears that a powerful CPU is crucial for both training and inference, and c
 
 The initial attempt to speed up the training process was to increase the number of agents from 10 to 20. However, this did not yield any performance improvement during testing, and therefore, this method was discarded.
 
-In the second attempt [Concurrent Unity Instances](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Training-ML-Agents.md#training-using-concurrent-unity-instances) was used. 4 environments were created, each with 10 agents undergoing training. Therefore, 40 agents were trained across 4 environments. Since each training session runs at 20 times the normal speed, a training speed factor of 800 was achieved. At 10 seconds of real-time training the AI model was trained for 133.3 minutes. The result of this training are in detail stored at this [tensorboard](https://tensorboard.dev/experiment/9a0ykmWaRj2aoi56K9X2hA/#scalars).
+In the second attempt [Concurrent Unity Instances](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Training-ML-Agents.md#training-using-concurrent-unity-instances) was used. 4 environments were created, each with 10 agents undergoing training. Therefore, 40 agents were trained across 4 environments. Since each training session runs at 20 times the normal speed, a training speed factor of 800 was achieved. At 10 seconds of real-time training the AI model was trained for 133.3 minutes. The result of this training are in detail stored at this [tensorboard](https://tensorboard.dev/experiment/9a0ykmWaRj2aoi56K9X2hA/#scalars). 
+After almost 7 hours of real-time training (equivalent to 5600 hours of AI training), the following observations were noted:
+
+- High learning progress was observed during the first hour and a half.
+- The middle phase was characterized by low learning progress and even a decline in the learned achievements.
+- Towards the end of the training phase, there was a slow but steady improvement in the success performance.
