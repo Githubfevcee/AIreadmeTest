@@ -171,7 +171,7 @@ Creating and using a [virtual environment](https://github.com/Unity-Technologies
 A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together.  
 The Release 20 is the latest current stable version. The developer branch is experimental, may provide more features, but can be unstable and cause version conflicts.
 
-[Release version 20](https://github.com/Unity-Technologies/ml-agents/tree/release_20):
+Release version [20](https://github.com/Unity-Technologies/ml-agents/tree/release_20):
 - Machine learning agents toolkit release version 20[^6]
 - Unity 2021.3.14f1[^7]
 - Python 3.9.12[^8]
