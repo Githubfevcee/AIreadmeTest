@@ -28,7 +28,10 @@ Following components were used creating Human-Motion-AI:
 
 > "This PPO implementation is not optimized for the use of a GPU. In general, it is not that easy to optimize Reinforcement Learning for the use of a GPU. So you are better of with a CPU currently." -[Marco Pleines, PhD student at TU Dortmund, Deep Reinforcement Learning](https://github.com/Unity-Technologies/ml-agents/issues/1246)
 
-It appears that a powerful CPU is crucial for both training and inference, and contrary to popular belief, the GPU plays a subordinate role in this case, because the implemention of the [reinforcement learning  algorithm "PPO"](https://github.com/yosider/ml-agents-1/blob/master/docs/Training-PPO.md) is supposedly not optimized for GPU usage.[^4][^5] The described setup is powerful enough to support a high number of concurrent training processes.
+It appears that a powerful CPU is crucial for both training and inference, and contrary to popular belief, the GPU plays a subordinate role in this case, because the implemention of the [reinforcement learning  algorithm "PPO"](https://github.com/yosider/ml-agents-1/blob/master/docs/Training-PPO.md) is supposedly not optimized for GPU usage.[^4][^5]  
+To confirm this, the same AI model was trained using both methods. PyTorch in version 1.8.1+cpu (CPU-focused) and 1.8.0+cu111 (GPU-focused) was used. The result was clear in all test runs. The CPU version is capable of performing calculations faster than the GPU Cuda version.
+
+
 [^4]:https://github.com/Unity-Technologies/ml-agents/issues/1246
 [^5]:https://github.com/Unity-Technologies/ml-agents/issues/4129
 
@@ -102,7 +105,7 @@ Creating and using a [virtual environment](https://github.com/Unity-Technologies
 - Python 3.9.12[^8]
 - Ml-agents python package 0.30[^9]
 - pip 23.1.2[^10]
-- PyTorch 1.7.1+cu110[^11]
+- PyTorch 1.7.1+cu110[^11] and later PyTorch 1.8.0+cpu[^17]
 - Ml-agents Unity package 2.0.1[^12]
 - Tensorboard 2.13.0[^13]
 - Windows 11[^14]
@@ -118,9 +121,12 @@ Creating and using a [virtual environment](https://github.com/Unity-Technologies
 [^13]:https://github.com/tensorflow/tensorboard/releases/tag/2.13.0
 [^14]:https://www.microsoft.com/de-de/software-download/windows11
 [^15]:https://numpy.org/doc/stable/release/1.21.2-notes.html
+[^17]:https://pytorch.org/get-started/previous-versions/
 
 Walker Benchmark Mean Reward : 2500
 
 Training with 256 HU:
 https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars
 Update: 6 env not 4 anymore
+
+Develop branch geht doch - pytorch 1.8 cpu, dann gpu version
