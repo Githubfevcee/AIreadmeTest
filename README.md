@@ -115,7 +115,7 @@ How it will ultimately behave will be shown in Training Attempt 3, which  descri
 ## Developer Branch Integration
 As the brand-new push in the [developer branch](https://github.com/Unity-Technologies/ml-agents/tree/develop) proved to be extremely functional, the project was shifted to it and left the [release-2020](https://github.com/Unity-Technologies/ml-agents/tree/release_20) branch.
 
-## Software and Library Versions
+## Installation and Versions Instructions
 A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together. Please follow the [official installation instructions](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) and select the versions listed below.
 Creating and using a [virtual environment](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Virtual-Environment.md) has proven to be useful. It prevents version conflicts and will potentially save a significant amount of time.
 
