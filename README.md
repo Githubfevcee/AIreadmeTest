@@ -96,7 +96,7 @@ Since no substantial changes were made other than halving the Hidden Units in th
 Before an AI model can be trained, it needs to receive information on how the training will be implemented and executed.
 
 ### Configuration Modification 1 - Reduced Hidden Units
-The [content of the .yaml file](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md) contains all the relevant information. Some of the most important parameters include: algorithm, [hyperparameters](https://unity-technologies.github.io/ml-agents/Training-ML-Agents/#behavior-configurations), reward signals and training duration.
+The [content of the .yaml file](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md) contains all the relevant information. Some of the most important parameters include: algorithm, [hyperparameters](https://unity-technologies.github.io/ml-agents/Training-Configuration-File/), reward signals and training duration.
 
 Excerpt from the .yaml file:  
      
