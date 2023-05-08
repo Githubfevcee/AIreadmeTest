@@ -1,5 +1,5 @@
 # Human-Motion-AI
-Human-Motion-AI aims to simulate human movement behavior using artificial inteligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) (also known as ml-agents) and incorporates various optimizations. 
+Human-Motion-AI aims to simulate human movement behavior using artificial intelligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) (also known as ml-agents) and incorporates various optimizations. 
 
 **Please note that this documentation keeps track of all steps performed, including those that were unsuccessful. This allows inexperienced developers to evaluate and understand the procedure to gain new knowledge. This documentation captures parts of my learning progress in machine learning and specifically about reinforcement learning in Unity and is intended to be helpful for developers working on similar projects. My recommendation is to read the complete documentation first to prevent avoidable errors. Background knowledge, helpful tips and links are included. If you want to dive in directly, be sure to pay close attention to the [installation and version instructions](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#installation-and-versions-instructions).**
 
@@ -12,6 +12,7 @@ Human-Motion-AI aims to simulate human movement behavior using artificial inteli
 6. [Training - Customized Training Routines - Attempt 3 - More Simultaneous Instances and Hidden Units Changes - Part One](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes)
 7. [Configuration of the Neural Network - Configuration Modification 1 Reduced Hidden Units](https://github.com/georghauschild/AIreadmeTest#configuration-modification-1---reduced-hidden-units)
 8. [Training - Customized Training Routines - Attempt 3 - More Simultaneous Instances and Hidden Units Changes - Part Two](https://github.com/georghauschild/AIreadmeTest#part-two)
+9. ...to be continued
 
 ## Steps of Optimisation
 - [x] Training
