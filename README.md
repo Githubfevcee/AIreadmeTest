@@ -1,7 +1,7 @@
 # Human-Motion-AI
 Human-Motion-AI aims to simulate human movement behavior using artificial inteligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and incorporates various optimizations. 
 
-**Please note that this documentation keeps track of all steps performed, including those that were unsuccessful. This allows inexperienced developers in this area to evaluate and understand the steps to gain new knowledge. This documentation captures parts of my learning progress in machine learning and specifically about reinforcement learning in Unity and is intended to be helpful for developers working on similar projects. Background knowledge, helpful tips and links are included.**
+**Please note that this documentation keeps track of all steps performed, including those that were unsuccessful. This allows inexperienced developers to evaluate and understand the procedure to gain new knowledge. This documentation captures parts of my learning progress in machine learning and specifically about reinforcement learning in Unity and is intended to be helpful for developers working on similar projects. Background knowledge, helpful tips and links are included.**
 
 ## Steps of optimisation
 - [x] Training environments
@@ -12,7 +12,7 @@ Human-Motion-AI aims to simulate human movement behavior using artificial inteli
 The project is work in progess. Unprocessed optimisation methods may be subject of change. 
 
 ## Training environments
-In order to generate a custom AI model, it is advisable to first optimize the training process and tailor it to the available hardware.
+In order to generate a custom AI model, it is advisable to first optimize the training process and tailor it to the available hardware. Following components were used creating this project:
 - CPU: AMD Ryzen 9-5900X[^1]
 - GPU: RTX 4090[^2]
 - RAM: 32GB[^3]
@@ -37,8 +37,28 @@ After almost 7 hours of real-time training (equivalent to 5600 hours of AI train
 - The middle phase was characterized by low learning progress and even a decline in the learned achievements.
 - Towards the end of the training phase, there was a slow but steady improvement in the success performance.
 
-## Additional information
-The project was build on [Machine Learning Agents Toolkit release version 20](https://github.com/Unity-Technologies/ml-agents/tree/release_20).
+## Software and library versions
+- Machine learning agents toolkit release version 20[^6]
+- Unity 2021.3.14f1[^7]
+- Python 3.9.12[^8]
+- Ml-agents python package 0.30[^9]
+- pip 23.1.2[^10]
+- PyTorch 1.7.1+cu110[^11]
+- Ml-agents Unity package 2.0.1[^12]
+- Tensorboard 2.13.0[^13]
+- Windows 11[^14]
+- Numpy 1.21.2[^15]
+
+[^6]:https://github.com/Unity-Technologies/ml-agents/tree/release_20
+[^7]:https://unity.com/releases/editor/whats-new/2021.3.14
+[^8]:https://www.python.org/downloads/release/python-3912/
+[^9]:https://libraries.io/pypi/mlagents
+[^10]:https://pypi.org/project/pip/
+[^11]:https://pytorch.org/get-started/previous-versions/
+[^12]:https://docs.unity.cn/Packages/com.unity.ml-agents@2.0/changelog/CHANGELOG.html#201---2021-10-13
+[^13]:https://github.com/tensorflow/tensorboard/releases/tag/2.13.0
+[^14]:https://www.microsoft.com/de-de/software-download/windows11
+[^15]:https://numpy.org/doc/stable/release/1.21.2-notes.html
 
 Walker Benchmark Mean Reward : 2500
 
