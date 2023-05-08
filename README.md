@@ -6,7 +6,7 @@ Human-Motion-AI aims to simulate human movement behavior using artificial inteli
 ## Steps of Optimisation
 - [x] Training
 - [x] Configuration of the Neural Network
-- [x] Scripts
+- [x] Developer Branch Integration
 - [ ] Implementation of [Marathon](https://github.com/Unity-Technologies/marathon-envs)
 
 The project is work in progress. Unprocessed optimisation methods may be subject of change. 
@@ -112,7 +112,8 @@ Reducing the number of hidden units from 512 to 256 represents a significant mod
 On the other hand, decreasing the number of hidden units may result in the network not being able to capture complex relationships in the data as effectively, leading to a poorer model.  
 How it will ultimately behave will be shown in Training Attempt 3, which  describes the impact of this modification during the training and the occurred result. **Please proceed to read the seccond part of [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest#part-two) for a comprehensive understanding of the actual behavior of the model.**
 
-## Scripts
+## Developer Branch Integration
+As the brand-new push in the [developer branch](https://github.com/Unity-Technologies/ml-agents/tree/develop) proved to be extremely functional, the project was shifted to it and left the [release-2020](https://github.com/Unity-Technologies/ml-agents/tree/release_20) branch.
 
 ## Software and Library Versions
 A well-known and time-consuming issue is getting the framework to run, especially for training purposes. The following versions of the libraries work seamlessly together. Please follow the [official installation instructions](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) and select the versions listed below.
