@@ -12,7 +12,8 @@ Human-Motion-AI aims to simulate human movement behavior using artificial intell
 6. [Training - Customized Training Routines - Attempt 3 - More Simultaneous Instances and Hidden Units Changes - Part One](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes)
 7. [Configuration of the Neural Network - Configuration Modification 1 Reduced Hidden Units](https://github.com/georghauschild/AIreadmeTest#configuration-modification-1---reduced-hidden-units)
 8. [Training - Customized Training Routines - Attempt 3 - More Simultaneous Instances and Hidden Units Changes - Part Two](https://github.com/georghauschild/AIreadmeTest#part-two)
-9. ...to be continued
+9. [Developer Branch Integration](https://github.com/georghauschild/AIreadmeTest#developer-branch-integration)
+10. ...to be continued
 
 ## Steps of Optimisation
 - [x] Training
