@@ -70,7 +70,9 @@ Code insights:
 Starting the learning process with concurrent Unity instances:  
 `mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\foldername\UnityEnvironment --num-envs=4 --run-id=MyOwnIdentifier --no-graphics`  
 Observing the learning process live via tensorboard:  
-`tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`
+`tensorboard --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker`  
+Upload the live tensorboard:  
+`tensorboard dev upload --logdir=C:\Users\username\Documents\GitHub\ml-agents\results\MyOwnIdentifier\Walker --name=WalkerDeveloperBranch`
 
 #### Attempt 3 - More Simultaneous Instances and Hidden Units Changes
 ##### Part One
