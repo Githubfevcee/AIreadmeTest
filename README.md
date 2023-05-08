@@ -142,9 +142,10 @@ Developer Branch up to #5911[^19]:
 - Ml-agents Unity package 2.3.0-exp.4<sup>display error? it's maybe exp.3</sup>
 - Tensorboard 2.13.0[^13]
 - Windows 11[^14]
-- Numpy 1.21.2[^15]  
+- Numpy 1.21.2[^15]
 
 * *It may also work for later versions of the developer branch, but it has only been tested up to #5911[^19].* *
+
 
 [^6]:https://github.com/Unity-Technologies/ml-agents/tree/release_20
 [^7]:https://unity.com/releases/editor/whats-new/2021.3.14
