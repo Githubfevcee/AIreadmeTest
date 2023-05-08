@@ -89,6 +89,12 @@ In contrast to the previous attempt, there is now a continuous increase in succe
 The Value Loss diagram indicates how well the model predicts the values of each state evaluation. During learning, the Value Loss diagram should initially increase as the model attempts to improve its prediction capabilities to better understand the environment and make better decisions. However, once the model starts to better understand the environment and make better decisions, the Value Loss should gradually decrease as the model is able to more accurately predict the state evaluations.  
 In contrast, a consistently increasing Value Loss diagram indicates that the model is struggling to understand the environment and make better decisions, leading to poorer performance.  
 
+Value Loss - Attempt 2 - Concurrent Unity Instances:
+![Losses_Value Loss  v20](https://user-images.githubusercontent.com/37111215/236862558-ada2e212-edb4-462a-a57d-de83f3d8d533.svg)
+
+Value Loss - Attempt 3 - More Simultaneous Instances and Hidden Units Changes:
+![Losses_Value Loss 256HU](https://user-images.githubusercontent.com/37111215/236862968-f16f6ae2-f3af-405e-98da-3163d59698f9.svg)
+
 Since no substantial changes were made other than halving the Hidden Units in the configuration of the neural network, it is now certain that this modification has had a very positive impact on the AI's ability to better understand its environment and make smarter decisions.
 
 
