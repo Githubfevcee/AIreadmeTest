@@ -144,7 +144,7 @@ Developer Branch up to [#5911](https://github.com/Unity-Technologies/ml-agents/p
 - Windows 11[^14]
 - Numpy 1.21.2[^15]
 
-*It may also work for later versions of the developer branch, but it has only been tested up to [#5911](https://github.com/Unity-Technologies/ml-agents/pull/5911)*
+*It may also work for later versions of the developer branch, but it has only been tested up to [#5911](https://github.com/Unity-Technologies/ml-agents/pull/5911).*
 
 
 [^6]:https://github.com/Unity-Technologies/ml-agents/tree/release_20
