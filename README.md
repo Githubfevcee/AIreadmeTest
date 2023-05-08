@@ -147,6 +147,10 @@ The same training arguments as in the [Training Attempt 3](https://github.com/ge
 
 The [modified training file](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#configuration-modification-1---reduced-hidden-units) is also being taken over from [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) as it has had a positive impact on the AI's ability to better understand its environment and make smarter decisions through the halving of the Hidden Units.
 
+The completed training for the developer branch model can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/0nh8iKjQTKCgABRRbYnz4w/#scalars).
+
+
+
 
 
 
