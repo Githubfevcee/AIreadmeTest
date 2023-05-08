@@ -54,7 +54,7 @@ The initial attempt to speed up the training process was to increase the number 
 
 #### Attempt 2 - Concurrent Unity Instances
 In the second attempt [Concurrent Unity Instances](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Training-ML-Agents.md#training-using-concurrent-unity-instances) was used. 
-Four environments were created, each with 10 agents undergoing training. Therefore, 40 agents were trained across 4 environments. Since each training session runs at 20 times the normal speed, a speed factor of 800 was achieved. At 10 seconds of real-time training the AI model was able to train for 133.3 minutes. Using the no-graphics label is useful for saving hardware resources if there is no need to observe the AI training progress graphically. You can still view a detailed live report of the ongoing training with the [TensorFlow utility named tensorboard](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Tensorboard.md). The result of this training are in detail stored at this uploaded [tensorboard](https://tensorboard.dev/experiment/9a0ykmWaRj2aoi56K9X2hA/#scalars). The official definition for the given diagramms can be found [here](https://unity-technologies.github.io/ml-agents/Using-Tensorboard/).
+Four environments were created, each with 10 agents undergoing training. Therefore, 40 agents were trained across 4 environments. Since each training session runs at 20 times the normal speed, a speed factor of 800 was achieved. At 10 seconds of real-time training the AI model was able to train for 133.3 minutes. Using the no-graphics label is useful for saving hardware resources if there is no need to observe the AI training progress graphically. You can still view a detailed live report of the ongoing training with the [TensorFlow utility named tensorboard](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Tensorboard.md). The result of this training are in detail stored at this uploaded [tensorboard](https://tensorboard.dev/experiment/9a0ykmWaRj2aoi56K9X2hA/#scalars). The official definition for the given diagrams can be found [here](https://unity-technologies.github.io/ml-agents/Using-Tensorboard/).
 After almost 7 hours of real-time training (equivalent to 5600 hours of AI training), the following main observations were noted:
 
 - High learning progress during the first hour and a half.
@@ -96,7 +96,7 @@ Since no substantial changes were made other than halving the Hidden Units in th
 Before an AI model can be trained, it needs to receive information on how the training will be implemented and executed.
 
 ### Configuration Modification 1 - Reduced Hidden Units
-The [content of the .yaml file](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md) contains all the relevant information. Some of the most important parameters include: algorithm, [hyperparameters](https://unity-technologies.github.io/ml-agents/Training-Configuration-File/), reward signals and training duration.
+The [Training Configuration File .yaml](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md) contains all the relevant information.
 
 Excerpt from the .yaml file:  
      
