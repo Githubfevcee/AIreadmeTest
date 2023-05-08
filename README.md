@@ -148,6 +148,9 @@ The same training arguments as in the [Training Attempt 3](https://github.com/ge
 
 
 ## Installation and Version Instructions
+Make sure that the command line is in the directory of the main ML Agents folder.  
+- example: `PS C:\Users\username\Documents\GitHub\ml-agents>`
+
 Creating and using a [virtual environment](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Using-Virtual-Environment.md) has proven to be useful. It prevents version conflicts and will potentially save a significant amount of time.  
 - create a new environment: `python -m venv python-envs\sample-env`  
 - activate the environment: `python-envs\sample-env\Scripts\activate`
