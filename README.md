@@ -125,7 +125,7 @@ Excerpt from the .yaml file:
 Reducing the number of hidden units from 512 to 256 represents a significant modification to the AI model, which may lead to faster network training and reduced memory usage, as fewer parameters need to be trained. Additionally, the network may become less susceptible to overfitting, especially if the original network architecture was too large.
 On the other hand, decreasing the number of hidden units may result in the network not being able to capture complex relationships in the data as effectively, leading to a poorer model.  
 How it will ultimately behave will be shown in Training Attempt 3, which  describes the impact of this modification during the training and the occurred result.  
-**Please proceed to read the seccond part of [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest#part-two) for a comprehensive understanding of the actual behavior of the model.**
+**Continue to read the seccond part of [Attempt 3 - More Simultaneous Instances and Hidden Units Changes](https://github.com/georghauschild/AIreadmeTest#part-two) for a comprehensive understanding of the actual behavior of the model.**
 
 ## Developer Branch Integration
 As the brand-new push in the [developer branch](https://github.com/Unity-Technologies/ml-agents/tree/develop) proved to be extremely functional, the project was shifted to it and left the [release-20](https://github.com/Unity-Technologies/ml-agents/tree/release_20) branch. Be aware of version changes mentioned in the [installation and version instructions](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#installation-and-versions-instructions).
