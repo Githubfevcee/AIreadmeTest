@@ -42,7 +42,7 @@ Following components were used creating Human-Motion-AI:
 > "This PPO implementation is not optimized for the use of a GPU. In general, it is not that easy to optimize Reinforcement Learning for the use of a GPU. So you are better of with a CPU currently." -[Marco Pleines, PhD student at TU Dortmund, Deep Reinforcement Learning](https://github.com/Unity-Technologies/ml-agents/issues/1246)
 
 It appears that a powerful CPU is crucial for both training and inference, and contrary to popular belief, the GPU plays a subordinate role in this case, because the implemention of the [reinforcement learning  algorithm "PPO"](https://github.com/yosider/ml-agents-1/blob/master/docs/Training-PPO.md) is supposedly not optimized for GPU usage.[^4][^5]  
-To confirm this, the same AI model was trained using both methods. PyTorch in version 1.8.0+cpu (CPU-focused) and 1.8.0+cu111 (GPU-focused) was used. The result was clear in all test runs. The CPU version is capable of performing calculations faster than the GPU Cuda version.
+To confirm this, the same AI model was trained using both methods. PyTorch in version 1.8.0+cpu (CPU-focused) and 1.8.0+cu111 (GPU-focused) was used. The result was clear in all test runs. The CPU version is capable of performing calculations faster than the GPU Cuda version.  
 ![pytorch1 8cpuVSgpupng3](https://user-images.githubusercontent.com/37111215/236808865-2cc2bd89-641c-420f-bad5-ef6717e1bd68.png)  
 Left side = Training with version 1.8.0+cpu (CPU-focused)  
 Right side = Training with version 1.8.0+cu111 (GPU-focused)
