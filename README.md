@@ -141,11 +141,3 @@ Creating and using a [virtual environment](https://github.com/Unity-Technologies
 [^15]:https://numpy.org/doc/stable/release/1.21.2-notes.html
 [^17]:https://pytorch.org/get-started/previous-versions/
 [^18]:https://docs.unity3d.com/Packages/com.unity.ml-agents@2.3/manual/index.html
-
-Walker Benchmark Mean Reward : 2500
-
-Training with 256 HU:
-https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars
-Update: 6 env not 4 anymore
-
-Develop branch geht doch - pytorch 1.8 cpu, dann gpu version
