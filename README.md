@@ -1,7 +1,7 @@
 # Human-Motion-AI
-Human-Motion-AI aims to simulate human movement behavior using artificial inteligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and applies various optimisations. 
+Human-Motion-AI aims to simulate human movement behavior using artificial inteligence. The Unity project is based on the [Walker scenario](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Learning-Environment-Examples.md#walker) from the [Machine Learning Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and incorporates various optimizations. 
 
-**Please note that this documentation tracks all applied steps, even those that were unsuccessful. This allows novice developers in this domain to evaluate and understand these steps in order to gain new knowledge. This documentation captures parts of my learning progress on machine learning and reinforcement learning in Unity in particular, and should be helpful for developers who work on similar projects. Background knowledge, helpful tips and links are included.**
+**Please note that this documentation keeps track of all steps performed, including those that were unsuccessful. This allows inexperienced developers in this area to evaluate and understand the steps to gain new knowledge. This documentation captures parts of my learning progress in machine learning and specifically about reinforcement learning in Unity and is intended to be helpful for developers working on similar projects. Background knowledge, helpful tips and links are included.**
 
 ## Steps of optimisation
 - [x] Training environments
@@ -13,18 +13,24 @@ The project is work in progess. Unprocessed optimisation methods may be subject 
 
 ## Training environments
 In order to generate a custom AI model, it is advisable to first optimize the training process and tailor it to the available hardware.
-- CPU: AMD Ryzen 9-5900X
-- GPU: RTX 4090
-- RAM: 32GB
+- CPU: AMD Ryzen 9-5900X[^1]
+- GPU: RTX 4090[^2]
+- RAM: 32GB[^3]
+[^1]: https://www.amd.com/de/products/cpu/amd-ryzen-9-5900x
+[^2]: https://manli.com/en/product-detail-Manli_GeForce_RTX%C2%AE_4090_Gallardo_(M3530+N675)-312.html
+[^3]: https://www.corsair.com/de/de/Kategorien/Produkte/Arbeitsspeicher/VENGEANCE%C2%AE-LPX-32GB-%282-x-16GB%29-DDR4-DRAM-3000MHz-C16-Memory-Kit---Black/p/CMK32GX4M2D3000C16
+
 > "For most of the models generated with the ML-Agents Toolkit, CPU will be faster than GPU." -[Unity documentation](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Unity-Inference-Engine.md)
 
 > "This PPO implementation is not optimized for the use of a GPU. In general, it is not that easy to optimize Reinforcement Learning for the use of a GPU. So you are better of with a CPU currently." -[Marco Pleines, PhD student at TU Dortmund, Deep Reinforcement Learning](https://github.com/Unity-Technologies/ml-agents/issues/1246)
 
-It appears that a powerful CPU is crucial for both training and inference, and contrary to popular belief, the GPU plays a subordinate role in this case.
+It appears that a powerful CPU is crucial for both training and inference, and contrary to popular belief, the GPU plays a subordinate role in this case, because the implemention of the [reinforcement learning  algorithm "PPO"](https://github.com/yosider/ml-agents-1/blob/master/docs/Training-PPO.md) is supposedly not optimized for GPU usage.[^4][^5]
+[^4]:https://github.com/Unity-Technologies/ml-agents/issues/1246
+[^5]:https://github.com/Unity-Technologies/ml-agents/issues/4129
 
 The initial attempt to speed up the training process was to increase the number of agents from 10 to 20. However, this did not yield any performance improvement during testing, and therefore, this method was discarded.
 
-In the second attempt [Concurrent Unity Instances](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Training-ML-Agents.md#training-using-concurrent-unity-instances) was used. 4 environments were created, each with 10 agents undergoing training. Therefore, 40 agents were trained across 4 environments. Since each training session runs at 20 times the normal speed, a training speed factor of 800 was achieved. At 10 seconds of real-time training the AI model was trained for 133.3 minutes. The result of this training are in detail stored at this [tensorboard](https://tensorboard.dev/experiment/9a0ykmWaRj2aoi56K9X2hA/#scalars) and the official definition for the given diagramms are [here](https://unity-technologies.github.io/ml-agents/Using-Tensorboard/). 
+In the second attempt [Concurrent Unity Instances](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Training-ML-Agents.md#training-using-concurrent-unity-instances) was used. Four environments were created, each with 10 agents undergoing training. Therefore, 40 agents were trained across 4 environments. Since each training session runs at 20 times the normal speed, a speed factor of 800 was achieved. At 10 seconds of real-time training the AI model was able to train for 133.3 minutes. The result of this training are in detail stored at this [tensorboard](https://tensorboard.dev/experiment/9a0ykmWaRj2aoi56K9X2hA/#scalars). The official definition for the given diagramms can be found [here](https://unity-technologies.github.io/ml-agents/Using-Tensorboard/). 
 After almost 7 hours of real-time training (equivalent to 5600 hours of AI training), the following main observations were noted:
 
 - High learning progress during the first hour and a half.
