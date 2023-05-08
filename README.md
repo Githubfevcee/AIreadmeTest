@@ -96,7 +96,7 @@ Value Loss - Attempt 2 - Concurrent Unity Instances:
 Value Loss - Attempt 3 - More Simultaneous Instances and Hidden Units Changes:
 ![Losses_Value Loss 256HU](https://user-images.githubusercontent.com/37111215/236862968-f16f6ae2-f3af-405e-98da-3163d59698f9.svg)
 
-The complete training run 3 can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars).  
+The complete training run 3 can be viewed in this [tensorboard](https://tensorboard.dev/experiment/BB7YBlNnQkqu51mYxkpFDw/#scalars).  
 Since no substantial changes were made other than halving the Hidden Units in the configuration of the neural network, it is now certain that this modification has had a very positive impact on the AI's ability to better understand its environment and make smarter decisions.
 
 
@@ -150,7 +150,7 @@ The same training arguments as in the [Training Attempt 3](https://github.com/ge
 
 The [modified training file](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#configuration-modification-1---reduced-hidden-units) is also being taken over from [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) as it has had a positive impact on the AI's ability to better understand its environment and make smarter decisions through the halving of the Hidden Units.
 
-The completed training for the developer branch model can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/0nh8iKjQTKCgABRRbYnz4w/#scalars).
+The completed training for the developer branch model can be viewed in this [tensorboard](https://tensorboard.dev/experiment/0nh8iKjQTKCgABRRbYnz4w/#scalars).
 
 
 
