@@ -13,12 +13,14 @@ Human-Motion-AI aims to simulate human movement behavior, using artificial intel
 7. [Configuration of the Neural Network - Configuration Modification 1 Reduced Hidden Units](https://github.com/georghauschild/AIreadmeTest#configuration-modification-1---reduced-hidden-units)
 8. [Training - Customized Training Routines - Attempt 3 - More Simultaneous Instances and Hidden Units Changes - Part Two](https://github.com/georghauschild/AIreadmeTest#part-two)
 9. [Developer Branch Integration](https://github.com/georghauschild/AIreadmeTest#developer-branch-integration)
+10. [Developer Branch AI model]()
 10. ...to be continued
 
 ## Steps of Optimisation
 - [x] Training
 - [x] Configuration of the Neural Network
 - [x] Developer Branch Integration
+- [x] Developer Branch AI model
 - [ ] Support from non-AI-based tools
 - [ ] Implementation of [Marathon](https://github.com/Unity-Technologies/marathon-envs)
 
@@ -142,13 +144,13 @@ As the brand-new push in the [developer branch](https://github.com/Unity-Technol
   Communicator API: 1.5.0,  
   PyTorch: 1.8.0+cpu
 ```
+## Developer Branch AI model
 The same training arguments as in the [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) are being used as they have shown to provide satisfactory performance:  
 `mlagents-learn config/ppo/Walker.yaml --env=C:\Users\username\Desktop\Walker\exe\UnityEnvironment --num-envs=6 --run-id=MyOwnIdentifier --no-graphics`
 
 The [modified training file](https://github.com/georghauschild/AIreadmeTest/blob/main/README.md#configuration-modification-1---reduced-hidden-units) is also being taken over from [Training Attempt 3](https://github.com/georghauschild/AIreadmeTest#attempt-3---more-simultaneous-instances-and-hidden-units-changes) as it has had a positive impact on the AI's ability to better understand its environment and make smarter decisions through the halving of the Hidden Units.
 
 The completed training for the developer branch model can be viewed in this [Tensorboard](https://tensorboard.dev/experiment/0nh8iKjQTKCgABRRbYnz4w/#scalars).
-
 
 
 
